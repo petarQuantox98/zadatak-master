@@ -1,0 +1,37 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Niri Suite" parallel="methods" thread-count="2">
+
+    <test verbose="100" name="PC - Chrome">
+        <parameter name="browser" value="Chrome"/>
+
+        <classes>
+            <class name="NIRI.Tests.PC.CheckFAQ"/>
+        </classes>
+    </test>
+
+    <test verbose="100" name="PC - Chrome - Headless">
+        <parameter name="browser" value="Chrome"/>
+        <parameter name="headless" value="true"/>
+
+        <classes>
+            <class name="NIRI.Tests.PC.CheckFAQ"/>
+        </classes>
+    </test>
+
+    <test verbose="100" name="PC - Firefox">
+        <parameter name="browser" value="Firefox"/>
+
+        <classes>
+            <class name="NIRI.Tests.PC.CheckFAQ"/>
+        </classes>
+    </test>
+
+    <test verbose="100" name="Mobile - Chrome">
+        <parameter name="browser" value="Chrome"/>
+        <parameter name="device" value="Samsung Galaxy S8"/>
+        <classes>
+            <class name="NIRI.Tests.Mobile.CheckFAQ"/>
+        </classes>
+    </test>
+
+</suite>
